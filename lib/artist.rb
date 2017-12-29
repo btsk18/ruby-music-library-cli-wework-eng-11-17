@@ -31,7 +31,7 @@ class Artist
   end
 
   def add_song(song)
-    found_song = @songs.any? { |t| t == song }
+    found_song = @songs.any? { |t| t.name == song.name }
     if found_song == false && song.artist == nil
       song.artist = self
       @songs << song
