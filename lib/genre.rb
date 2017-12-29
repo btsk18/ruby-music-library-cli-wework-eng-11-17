@@ -27,4 +27,8 @@ class Genre
     genre.save
     genre
   end
+
+  def artists
+    songs.collect { |song| song.artist }.uniq
+  end
 end
